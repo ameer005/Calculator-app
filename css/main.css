@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+:root {
+  --color-background-main: #3a4764;
+  --color-background-toggle: #232c43;
+  --color-background-display: #182034;
+  --color-background-keys-1: #637097;
+  --color-shadow-keys-1: #404e72;
+  --color-background-keys-3: #d03f2f;
+  --color-shodow-keys-3: #93261a;
+  --color-background-keys-2: #eae3dc;
+  --color-shadow-keys-2: #b4a597;
+  --color-keys-text-1: #444b5a;
+  --color-keys-text-2: #ffffff;
+  --border-radius-default: 0.9rem;
+}
+
+:root .theme-two {
+  --color-background-main: #e6e6e6;
+  --color-background-toggle: #d1cccc;
+  --color-background-display: #ededed;
+  --color-background-keys-1: #377f86;
+  --color-shadow-keys-1: #1b5f65;
+  --color-background-keys-3: #ca5502;
+  --color-shodow-keys-3: #893901;
+  --color-background-keys-2: #e5e4e1;
+  --color-shadow-keys-2: #a69d91;
+  --color-keys-text-1: #35352c;
+  --color-keys-text-2: #ffffff;
+}
+
+:root .theme-three {
+  --color-background-main: #160628;
+  --color-background-toggle: #1d0934;
+  --color-background-display: #1d0934;
+  --color-background-keys-1: #58077d;
+  --color-shadow-keys-1: #bc15f4;
+  --color-background-keys-3: #00e0d1;
+  --color-shodow-keys-3: #6cf9f2;
+  --color-background-keys-2: #341c4f;
+  --color-shadow-keys-2: #871c9c;
+  --color-keys-text-1: #ffe53d;
+  --color-keys-text-2: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  width: 100%;
+  line-height: 1;
+  min-height: 100vh;
+  background-color: var(--color-background-main);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 47.4rem;
+  padding: 2.4rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.8rem;
+  color: var(--color-keys-text-2);
+  margin-bottom: 2.4rem;
+}
+
+.header__logo-text {
+  font-size: 2.4rem;
+}
+
+.theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.8rem;
+  color: var(--color-keys-text-2);
+}
+
+.theme__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.toggle {
+  position: relative;
+  width: 6rem;
+  height: 2.2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle::after {
+  content: "1 2 3";
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  top: -1.7rem;
+  left: 0.8rem;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: 6rem;
+  height: 2.2rem;
+  border-radius: 2rem;
+  background-color: var(--color-background-toggle);
+}
+
+.toggle__fill-btn {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 1.25rem;
+  background-color: var(--color-background-keys-3);
+}
+
+.display {
+  height: 10.6rem;
+  text-align: right;
+  border-radius: var(--border-radius-default);
+  padding: 2.4rem 2.4rem;
+  color: var(--color-keys-text-2);
+  background-color: var(--color-background-display);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.display__number-sub {
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.display__number-main {
+  font-size: 3.4rem;
+}
+
+.keypad {
+  background-color: var(--color-background-toggle);
+  padding: 2rem;
+  border-radius: var(--border-radius-default);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 4.8rem;
+  gap: 2rem;
+}
+
+.keypad__btn {
+  font-family: inherit;
+  font-size: 3.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0.7rem 0;
+  padding-bottom: 0;
+  border: none;
+  border-radius: var(--border-radius-default);
+  background: none;
+  color: var(--color-keys-text-1);
+  background-color: var(--color-background-keys-2);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-2);
+          box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-2);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+@media only screen and (max-width: 25em) {
+  .keypad__btn {
+    font-size: 2.6rem;
+  }
+}
+
+.keypad__btn--del {
+  font-size: 1.8rem;
+  color: var(--color-keys-text-2);
+  background-color: var(--color-background-keys-1);
+  -webkit-box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+          box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+}
+
+.keypad__btn--reset {
+  grid-column: span 2;
+  font-size: 1.6rem;
+  color: var(--color-keys-text-2);
+  background-color: var(--color-background-keys-1);
+  -webkit-box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+          box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+}
+
+.keypad__btn--operator-equal {
+  grid-column: span 2;
+  font-size: 2rem;
+  color: var(--color-keys-text-2);
+  background-color: var(--color-background-keys-3);
+  -webkit-box-shadow: 0 0.3rem 0rem var(--color-shodow-keys-3);
+          box-shadow: 0 0.3rem 0rem var(--color-shodow-keys-3);
+}
+
+.keypad__btn:active {
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
+}

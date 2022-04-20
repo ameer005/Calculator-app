@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+:root {
+  // theme 1
+  --color-background-main: #3a4764; //(main background)
+  --color-background-toggle: #232c43; //toggle background, keypad background
+  --color-background-display: #182034; //(screen background)
+
+  --color-background-keys-1: #637097; //(key background)
+  --color-shadow-keys-1: #404e72; //(key shadow)
+
+  --color-background-keys-3: #d03f2f; //(key background, toggle)
+  --color-shodow-keys-3: #93261a;
+
+  --color-background-keys-2: #eae3dc; //(key background)
+  --color-shadow-keys-2: #b4a597; //(key shadow)
+
+  --color-keys-text-1: #444b5a;
+  --color-keys-text-2: #ffffff;
+
+  // other var
+  --border-radius-default: 0.9rem;
+
+  .theme-two {
+    --color-background-main: #e6e6e6; //(main background)
+    --color-background-toggle: #d1cccc; //toggle background, keypad background
+    --color-background-display: #ededed; //(screen background)
+
+    --color-background-keys-1: #377f86; //(key background)
+    --color-shadow-keys-1: #1b5f65; //(key shadow)
+
+    --color-background-keys-3: #ca5502; //(key background, toggle)
+    --color-shodow-keys-3: #893901;
+
+    --color-background-keys-2: #e5e4e1; //(key background)
+    --color-shadow-keys-2: #a69d91; //(key shadow)
+
+    --color-keys-text-1: #35352c;
+    --color-keys-text-2: #ffffff;
+  }
+
+  .theme-three {
+    --color-background-main: #160628; //(main background)
+    --color-background-toggle: #1d0934; //toggle background, keypad background
+    --color-background-display: #1d0934; //(screen background)
+
+    --color-background-keys-1: #58077d; //(key background)
+    --color-shadow-keys-1: #bc15f4; //(key shadow)
+
+    --color-background-keys-3: #00e0d1; //(key background, toggle)
+    --color-shodow-keys-3: #6cf9f2;
+
+    --color-background-keys-2: #341c4f; //(key background)
+    --color-shadow-keys-2: #871c9c; //(key shadow)
+
+    --color-keys-text-1: #ffe53d;
+    --color-keys-text-2: #ffffff;
+  }
+}
+
+// MEDIA QUERIES MANAGER
+
+@mixin respond($breakpoint) {
+  // 400px
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  width: 100%;
+  line-height: 1;
+  min-height: 100vh;
+  background-color: var(--color-background-main);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

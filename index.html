@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <!-- TOP PART -->
+      <div class="header">
+        <h2 class="header__logo-text">calc</h2>
+
+        <div class="theme">
+          <p class="theme__text">theme</p>
+          <label class="toggle">
+            <input type="checkbox" class="toggle__input" />
+            <div class="toggle__fill">
+              <div class="toggle__fill-btn" data-theme="theme-1"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- DISPLAY -->
+      <div class="display">
+        <p class="display__number-sub"></p>
+        <p class="display__number-main"></p>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="keypad">
+        <button class="keypad__btn keypad__btn--number">7</button>
+        <button class="keypad__btn keypad__btn--number">8</button>
+        <button class="keypad__btn keypad__btn--number">9</button>
+        <button class="keypad__btn keypad__btn--del">del</button>
+        <button class="keypad__btn keypad__btn--number">4</button>
+        <button class="keypad__btn keypad__btn--number">5</button>
+        <button class="keypad__btn keypad__btn--number">6</button>
+        <button class="keypad__btn keypad__btn--operator">+</button>
+        <button class="keypad__btn keypad__btn--number">1</button>
+        <button class="keypad__btn keypad__btn--number">2</button>
+        <button class="keypad__btn keypad__btn--number">3</button>
+        <button class="keypad__btn keypad__btn--operator">-</button>
+        <button class="keypad__btn keypad__btn--number">.</button>
+        <button class="keypad__btn keypad__btn--number">0</button>
+        <button class="keypad__btn keypad__btn--operator">/</button>
+        <button class="keypad__btn keypad__btn--operator">×</button>
+        <button class="keypad__btn keypad__btn--reset">reset</button>
+        <button class="keypad__btn keypad__btn--operator-equal">=</button>
+      </div>
+    </main>
+  </body>
+</html>

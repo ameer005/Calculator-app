@@ -1,0 +1,165 @@
+.calculator {
+  // background-color: white;
+  width: 100%;
+  max-width: 47.4rem;
+  padding: 2.4rem;
+}
+
+///////////////////////////////////////////////////
+// TOP PART
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.8rem;
+  color: var(--color-keys-text-2);
+  margin-bottom: 2.4rem;
+
+  &__logo-text {
+    font-size: 2.4rem;
+  }
+}
+
+.theme {
+  display: flex;
+  gap: 1.8rem;
+  color: var(--color-keys-text-2);
+
+  &__text {
+    align-self: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.toggle {
+  position: relative;
+  width: 6rem;
+  height: 2.2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  cursor: pointer;
+
+  &::after {
+    content: "1 2 3";
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    position: absolute;
+    top: -1.7rem;
+    left: 0.8rem;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__fill {
+    position: relative;
+    width: 6rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+
+    background-color: var(--color-background-toggle);
+  }
+
+  &__fill-btn {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    transform: translate(0, -50%);
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 1.25rem;
+    background-color: var(--color-background-keys-3);
+  }
+}
+
+////////////////////////////////////////////////////////////
+// DISPLAY
+
+.display {
+  height: 10.6rem;
+  text-align: right;
+  border-radius: var(--border-radius-default);
+  padding: 2.4rem 2.4rem;
+  color: var(--color-keys-text-2);
+  background-color: var(--color-background-display);
+  overflow: hidden;
+
+  margin-bottom: 1.8rem;
+
+  &__number-sub {
+    font-size: 1.2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__number-main {
+    font-size: 3.4rem;
+  }
+}
+
+/////////////////////////////////////////////////////////////
+// BUTTONS
+
+.keypad {
+  background-color: var(--color-background-toggle);
+  padding: 2rem;
+  border-radius: var(--border-radius-default);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 4.8rem;
+  gap: 2rem;
+
+  &__btn {
+    font-family: inherit;
+    font-size: 3.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 0.7rem 0;
+    padding-bottom: 0;
+    border: none;
+    border-radius: var(--border-radius-default);
+    background: none;
+    color: var(--color-keys-text-1);
+    background-color: var(--color-background-keys-2);
+    cursor: pointer;
+    box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-2);
+    transition: all 0.1s;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+    }
+
+    &--del {
+      font-size: 1.8rem;
+      color: var(--color-keys-text-2);
+      background-color: var(--color-background-keys-1);
+      box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+    }
+
+    &--reset {
+      grid-column: span 2;
+
+      font-size: 1.6rem;
+      color: var(--color-keys-text-2);
+      background-color: var(--color-background-keys-1);
+      box-shadow: 0 0.3rem 0rem var(--color-shadow-keys-1);
+    }
+
+    &--operator-equal {
+      grid-column: span 2;
+
+      font-size: 2rem;
+      color: var(--color-keys-text-2);
+      background-color: var(--color-background-keys-3);
+      box-shadow: 0 0.3rem 0rem var(--color-shodow-keys-3);
+    }
+
+    &:active {
+      transform: translateY(0.2rem);
+    }
+  }
+}
